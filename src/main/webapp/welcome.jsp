@@ -12,6 +12,9 @@
     <title>Hello World!</title>
 </head>
 <body>
+
+    <jsp:forward page="redirected.jsp"/>
+
     <p>Server name: ${pageContext.request.serverName}</p>
     <p>Server port: ${pageContext.request.serverPort}</p>
     <p>Request URI: ${pageContext.request.requestURI}</p>
