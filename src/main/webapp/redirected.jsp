@@ -12,5 +12,6 @@
 </head>
 <body>
     <h1>Redirected page</h1>
+<jsp:include page="include/included.jsp"/>
 </body>
 </html>
