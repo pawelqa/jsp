@@ -34,7 +34,7 @@ public class HelloWorldServlet extends HttpServlet {
         writer.println("UserId : " + varUserId);
         writer.println("Localization : " + varLocalization);
         RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
-        dispatcher.forward(request, response);
+        dispatcher.include(request, response);
     }
 
 }
