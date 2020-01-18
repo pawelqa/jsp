@@ -1,37 +1,20 @@
-<%@ page import="java.time.LocalDate" %><%--
-  Created by IntelliJ IDEA.
-  User: Admin
-  Date: 12.01.2020
-  Time: 11:38
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" %>
-<%! private long visitCounter = 0;%>
 <html>
 <head>
     <title>Hello World!</title>
 </head>
 <body>
-
-    <jsp:forward page="redirected.jsp">
-        <jsp:param name="myParam" value="my value"/>
-    </jsp:forward>
-
-    <p>Server name: ${pageContext.request.serverName}</p>
-    <p>Server port: ${pageContext.request.serverPort}</p>
-    <p>Request URI: ${pageContext.request.requestURI}</p>
-
-    <h1>
-<%--        <% out.print("Hello world!"); %>--%>
-<%--       Dzisiaj jest: <%= java.time.LocalDate.now().toString() %>--%>
-<%--        Dzisiaj jest:--%>
-<%--    <%--%>
-<%--        String nowString = LocalDate.now().toString();--%>
-<%--        out.print(nowString);--%>
-<%--    %>--%>
-    </h1>
-    <p>
-        Licznik odwiedzin: <%= ++visitCounter%>
-    </p>
+<h2>Parametry wyszukiwania</h2>
+<form action="search.jsp" method="get">
+    <label>Szukane słowo: <input type="text" name="query"></label>
+    <label>Strona numer: <input type="number" name="page"></label>
+    <label>Sortowanie:
+        <select name="sort">
+            <option value="asc">rosnąco</option>
+            <option value="desc">malejąco</option>
+        </select>
+    </label>
+    <input type="submit" value="wyślij"/>
+</form>
 </body>
 </html>
